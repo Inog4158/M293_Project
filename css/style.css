@@ -1,0 +1,90 @@
+:root {
+    --color-primary: #344C64;
+    --color-secondary: #355B6B;
+    --color-highlight: #A3E4D7;
+    --color-text: #FFFFFF;
+
+    --shadow: linear-gradient(#000000BF, #000000BF);
+}
+
+* {
+    font-family: "DM sans", sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+    color: var(--color-text);
+}
+body {
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+
+    img {
+        max-height: 60%;
+    }
+    div {
+        flex: 1;
+    }
+    p {
+        margin: auto;
+    }
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+header, footer{
+    width: 100%;
+    height: 15vh;
+    background-color: var(--color-primary);
+}
+
+#home {
+    background-color: var(--color-secondary);
+}
+
+#summary {
+    background-color: var(--color-primary);
+    width: 80%;
+}
+
+#skills {
+    background:  var(--shadow),url("/img/background_table.png") center no-repeat ;
+    background-size: 100%;
+}
+
+#portfolio {
+    background-color: var(--color-primary);
+}
+
+#about {
+    background: var(--shadow), url("/img/background_mountain.png") center no-repeat;
+    background-size: cover;
+    height: 300vh;
+}
+
+#contact {
+    background-color: var(--color-primary);
+}
+
+#puffer {
+    background-color: var(--color-secondary);
+}
