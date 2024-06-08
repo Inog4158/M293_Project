@@ -18,5 +18,5 @@ window.addEventListener('scroll', function() {
     var scrollArea = 1000 -  window.innerHeight;
     var scrollTop = window.scrollY || window.scrollTop;
     var scrollPercent = scrollTop/scrollArea || 0;
-    bild.style.top = scrollPercent  * 15 + 'vh';
+    bild.style.top = scrollPercent  * 20 - 5 +'vh';
 });
