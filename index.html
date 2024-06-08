@@ -10,12 +10,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
           rel="stylesheet">
+    <script src="js/script.js"></script>
 </head>
 <body>
 
-<header></header>
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+
+    <nav>
+        <a href="#home" class="item"><span id="home-item">Home</span></a>
+        <a href="#skills" class="item"><span>Skills</span></a>
+        <a href="#portfolio" class="item"><span>Portfolio</span></a>
+        <a href="#about" class="item"><span>About Me</span></a>
+        <a href="#contact" class="item"><span>Contact</span></a>
+        <div class="underline"></div>
+    </nav>
+</header>
+
+
 <main>
-    <section id="home">Home</section>
+    <section id="home">
+        <div class="quote">
+            <h1><q>Live as if you were to die tomorrow. Learn as if you were to live forever.</q></h1>
+            <p>- Mahatma Gandhi</p>
+        </div>
+        <img src="img/profil_picture.png" alt="profile picture" id="profile">
+    </section>
     <section id="summary">Summary</section>
     <section id="skills">Skills</section>
     <section id="portfolio">Portfolio</section>
@@ -23,10 +45,19 @@
     <section id="contact">Contact</section>
     <section id="puffer"></section>
 </main>
+
+
 <footer>
-    <img src="img/logo.png" alt="logo">
-    <div class="puffer"></div>
-    <p>Made by Max Muster 2024</p>
+    <div class="logo">
+        <div class="img-container">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+    </div>
+    <div class="creator-text">
+        <p>Made by Max Muster 2024</p>
+    </div>
 </footer>
+
+
 </body>
 </html>
