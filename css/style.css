@@ -165,6 +165,12 @@ main {
     position: relative;
 }
 
+
+h1 {
+    font-size: 5vw;
+    text-align: center;
+}
+
 /* ---------------------------------------- */
 
 #home {
@@ -179,7 +185,7 @@ main {
         justify-content: center;
         align-items: center;
 
-        h1 {
+        h2 {
             width: 75%;
         }
         p {
@@ -244,8 +250,12 @@ main {
     position: relative;
     z-index: 15;
 
+    h1 {
+        margin-top: 60vh;
+    }
+
     ul {
-        margin-top: 70vh;
+
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -289,11 +299,6 @@ main {
 #portfolio {
     background-color: var(--color-primary);
     height: 100vh;
-
-    h1 {
-        font-size: 5vw;
-        text-align: center;
-    }
 }
 
 /* ---------------------------------------- */
