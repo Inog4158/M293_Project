@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('scroll', function() {
-    var bild = document.getElementById('profile');
-    var scrollArea = 1000 -  window.innerHeight;
-    var scrollTop = window.scrollY || window.scrollTop;
-    var scrollPercent = scrollTop/scrollArea || 0;
-    bild.style.top = scrollPercent  * 20 - 5 +'vh';
+    console.log(getVerticalScrollPercentage(document.body))
+    document.getElementById('profile').style.top =  getVerticalScrollPercentage(document.body)*1.5 - 5 +'vh';
 });
+
+function getVerticalScrollPercentage( elm ){
+    var p = elm.parentNode
+    return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
+}
