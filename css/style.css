@@ -470,6 +470,58 @@ h1 {
     z-index: 20;
     border-radius: 40px;
 }
+
+#contact-section {
+    height: 90vh;
+    bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .contact-text {
+            p {
+
+                a {
+                    transition: 0.5s;
+                    text-decoration: none;
+                    display: block;
+                    width: fit-content;
+                }
+                a:hover {
+                    color: var(--color-highlight);
+                }
+            }
+        }
+
+    }
+
+    form {
+        *{
+            color: black;
+        }
+
+    }
+
+    .social-media {
+        a {
+            text-decoration: none;
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+            img:hover {
+                scale: 105%;
+            }
+        }
+    }
+
+
 }
 
 /* ---------------------------------------- */

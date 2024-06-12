@@ -22,3 +22,7 @@ function getVerticalScrollPercentage( elm ){
     var p = elm.parentNode
     return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
 }
+
+function clearForm(){
+    document.getElementById('form').reset();
+}
