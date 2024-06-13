@@ -355,6 +355,7 @@ h1 {
                 border-radius: 50px;
                 height: fit-content;
                 align-self: end;
+                margin-top: 4vh;
             }
             a:hover {
                 background-color: var(--color-highlight);
@@ -362,7 +363,7 @@ h1 {
         }
 
         .card:hover {
-            grid-template-rows: auto fit-content(60%) ;
+            grid-template-rows: 1fr fit-content(60%) fit-content(30%);
 
             p {
                 display: inline;
@@ -372,7 +373,7 @@ h1 {
                 height: 15vw;
             }
             h2 {
-                align-self: center;
+                align-self: end;
                 text-align: center;
             }
             a {
