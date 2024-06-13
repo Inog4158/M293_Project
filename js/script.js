@@ -32,7 +32,3 @@ function getScrollOffsetter(multiplier, offset, unit) {
 function parallexEffect(elm, multiplier, offset){
     elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'vh')
 }
-
-function clearForm(){
-    document.getElementById('form').reset();
-}
