@@ -299,8 +299,6 @@ h1 {
     height: fit-content;
     min-height: 100vh;
 
-
-
     .gallery {
         min-height: 60%;
         height: fit-content;
@@ -401,10 +399,10 @@ h1 {
 
 #about-section {
     background: var(--shadow), url("/img/background_mountain.png") center no-repeat;
-    background-size: cover;
+    background-size: 100vw 150%;
+
     min-height: 200vh;
     height: fit-content;
-
     .timeline {
         margin-bottom: 50vh;
         display: grid;

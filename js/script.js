@@ -14,13 +14,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('scroll', function() {
-    console.log(getVerticalScrollPercentage(document.body))
-    document.getElementById('profile').style.top =  getVerticalScrollPercentage(document.body)*1.5 - 5 +'vh';
+    parallexEffect(document.getElementById('about-section'), -2, 90)
+    parallexEffect(document.getElementById('skills-section'), -1, 0)
+    document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');
 });
 
-function getVerticalScrollPercentage( elm ){
-    var p = elm.parentNode
+function getVerticalScrollPercentage(){
+    const elm = document.body;
+    const p = elm.parentNode
     return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
+}
+
+function getScrollOffsetter(multiplier, offset, unit) {
+    return getVerticalScrollPercentage() * multiplier + offset + unit;
+}
+
+function parallexEffect(elm, multiplier, offset){
+    elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'vh')
 }
 
 function clearForm(){
