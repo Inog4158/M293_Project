@@ -11,7 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
             home.style.color = 'var(--color-highlight)';
         });
     });
+    
+    centerContact();
 });
+
+window.addEventListener('resize', function() {
+    centerContact()
+})
+
+function centerContact() {
+    const contact = document.getElementById('contact-section');
+    const puffer = document.getElementById('puffer-section');
+    var contactHeight = parseFloat((getStyleValue(contact, 'padding-bottom').slice(0, -2))) + parseFloat(getStyleValue(contact, 'height').slice(0, -2))
+    contact.style.bottom = (getStyleValue(puffer, 'height').slice(0, -2)) - contactHeight/2 + 'px';
+}
+
+function getStyleValue(elm, property) {
+    return window.getComputedStyle(elm).getPropertyValue(property);
+}
 
 window.addEventListener('scroll', function() {
     parallexEffect(document.getElementById('about-section'), -2, 90)
