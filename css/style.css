@@ -420,20 +420,33 @@ h1 {
                 height: 60vh;
                 font-weight: normal;
                 z-index: 30;
+            }
+
+            img {
                 filter: brightness(50%);
             }
 
             .video-container {
                 overflow: hidden;
+                display: grid;
+                grid-template-rows: 15vw;
+                grid-template-columns: 15vw;
 
                 video {
+                    grid-row: 1 / 2;
+                    justify-self: center;
                     height: 15vw;
                     width: auto;
+                    filter: brightness(50%);
                 }
-            }
-            .video-container:hover {
-                filter: none;
-                scale: 105%;
+                .play {
+                    grid-row: 1 / 2;
+                    justify-self: center;
+                    align-self: center;
+                    display: inline;
+                    position: relative;
+                    z-index: 100;
+                }
             }
 
             .big {
@@ -444,6 +457,13 @@ h1 {
             .small {
                 visibility: hidden;
                 opacity: 0;
+            }
+
+            .play {
+                width: 3vw !important;
+                height: 3vw !important;
+                filter: none !important;
+                z-index: 35;
             }
 
             h2 {
@@ -476,6 +496,9 @@ h1 {
                 translate: 0 -15vh;
                 height: 15vw;
             }
+            .play {
+                translate: 0;
+            }
 
             .big {
                 visibility: hidden;
@@ -486,6 +509,20 @@ h1 {
                 visibility: visible;
                 opacity: 1;
             }
+
+            .video-container:hover {
+                scale: 105%;
+
+                video {
+                    filter: none;
+                }
+                .play    {
+                    scale: 200%;
+                    position: relative;
+                }
+            }
+
+
 
             h2 {
                 align-self: end;

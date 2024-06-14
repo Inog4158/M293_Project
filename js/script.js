@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     
-    const video = document.getElementById("video");
+    const video = document.getElementById("video-container");
     const overlay = document.getElementById("overlay");
     const overlayVideo = document.getElementById("overlay-video");
     
