@@ -392,13 +392,23 @@ h1 {
                 align-self: center;
             }
 
-            img {
+            img, video{
                 grid-row: 1 / 2;
                 width: 15vw;
                 height: 60vh;
                 font-weight: normal;
                 z-index: 30;
                 filter: brightness(50%);
+            }
+
+            .big {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .small {
+                visibility: hidden;
+                opacity: 0;
             }
 
             h2 {
@@ -427,9 +437,19 @@ h1 {
                 display: inline;
             }
 
-            img {
+            img, video{
                 translate: 0 -15vh;
                 height: 15vw;
+            }
+
+            .big {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .small {
+                visibility: visible;
+                opacity: 1;
             }
 
             h2 {
