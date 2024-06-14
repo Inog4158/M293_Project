@@ -100,10 +100,12 @@
 
                 <h2>Led Board</h2>
                 <img class="big" src="img/hochkantArduino.jpg" alt="Arduino-Projekt">
-                <video class="small" id="video" autoplay playsinline>
-                    <source src="media/Arduino%20Projekt.mp4" type="video/mp4">
-                    Your Browser doesn't support mp4 videos.
-                </video>
+                <div class="video-container">
+                    <video class="small" id="video" autoplay playsinline muted loop>
+                        <source src="media/Arduino%20Projekt.mp4" type="video/mp4">
+                        Your Browser doesn't support mp4 videos.
+                    </video>
+                </div>
                 <p>Anzeige-Board aus Led-Streifen mit Arduino</p>
                 <a href="downloads/WeihnachtsBoard.zip" download class="button">Download</a>
             </div>
@@ -116,6 +118,12 @@
                 <a href="downloads/Todo.zip" download class="button">Download</a>
             </div>
 
+        </div>
+        <div id="overlay">
+            <video id="overlay-video" muted playsinline loop>
+                <source src="media/Arduino%20Projekt.mp4" type="video/mp4">
+                Your Browser doesn't support mp4 videos.
+            </video>
         </div>
     </section>
 
@@ -224,6 +232,7 @@
         <p>Made by Max Muster 2024</p>
     </div>
 </footer>
+
 
 
 </body>

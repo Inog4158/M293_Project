@@ -167,6 +167,27 @@ footer {
     }
 }
 /* ---------------------------------------- */
+
+#overlay {
+    background: #00000077;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9000;
+    top: 0;
+    left: 0;
+
+    video {
+        width: 80vw;
+        height: auto;
+    }
+
+}
+
+
 section {
     width: 100vw;
 }
@@ -362,6 +383,7 @@ h1 {
     background-color: var(--color-primary);
     height: fit-content;
     min-height: 100vh;
+    position: relative;
 
     .gallery {
         min-height: 60%;
@@ -392,13 +414,22 @@ h1 {
                 align-self: center;
             }
 
-            img, video{
+            img, .video-container{
                 grid-row: 1 / 2;
                 width: 15vw;
                 height: 60vh;
                 font-weight: normal;
                 z-index: 30;
                 filter: brightness(50%);
+            }
+
+            .video-container {
+                overflow: hidden;
+
+                video {
+                    height: 15vw;
+                    width: auto;
+                }
             }
 
             .big {
@@ -437,7 +468,7 @@ h1 {
                 display: inline;
             }
 
-            img, video{
+            img, .video-container{
                 translate: 0 -15vh;
                 height: 15vw;
             }
@@ -474,7 +505,6 @@ h1 {
 #about-section {
     background: var(--shadow), url("/img/background_mountain.png") center no-repeat;
     background-size: 100vw 150%;
-
     min-height: 200vh;
     height: fit-content;
 
@@ -675,3 +705,4 @@ h1 {
     background-color: var(--color-secondary);
     height: 60vh;
 }
+

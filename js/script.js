@@ -13,11 +13,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     centerContact();
+
+    
+    
+    const video = document.getElementById("video");
+    const overlay = document.getElementById("overlay");
+    const overlayVideo = document.getElementById("overlay-video");
+    
+    overlay.addEventListener("click", function() {
+        overlay.style.display = "none";
+        overlayVideo.pause();
+        overlayVideo.currentTime = 0;
+    });
+    
+    video.addEventListener("click", function () {
+        overlay.style.display = "flex";
+        overlayVideo.play();
+    })
 });
 
 window.addEventListener('resize', function() {
     centerContact()
 })
+
+window.addEventListener('scroll', function() {
+    parallexEffect(document.getElementById('about-section'), -2, 90)
+    parallexEffect(document.getElementById('skills-section'), -1, 0)
+    document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');
+});
+
+
+
+
 
 function centerContact() {
     const contact = document.getElementById('contact-section');
@@ -29,12 +56,6 @@ function centerContact() {
 function getStyleValue(elm, property) {
     return window.getComputedStyle(elm).getPropertyValue(property);
 }
-
-window.addEventListener('scroll', function() {
-    parallexEffect(document.getElementById('about-section'), -2, 90)
-    parallexEffect(document.getElementById('skills-section'), -1, 0)
-    document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');
-});
 
 function getVerticalScrollPercentage(){
     const elm = document.body;
