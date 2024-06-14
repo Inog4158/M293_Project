@@ -431,6 +431,10 @@ h1 {
                     width: auto;
                 }
             }
+            .video-container:hover {
+                filter: none;
+                scale: 105%;
+            }
 
             .big {
                 visibility: visible;
