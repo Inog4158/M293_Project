@@ -311,7 +311,7 @@ h1 {
 /* ---------------------------------------- */
 
 #skills-section {
-    background: var(--shadow), url("img/backgroundTable.png") center no-repeat;
+    background: var(--shadow), url("../img/backgroundTable.png") center no-repeat;
     background-size: cover;
     height: fit-content;
     background-attachment: fixed;
@@ -544,7 +544,7 @@ h1 {
 /* ---------------------------------------- */
 
 #about-section {
-    background: var(--shadow), url("img/backgroundMountain.png") center no-repeat;
+    background: var(--shadow), url("../img/backgroundMountain.png") center no-repeat;
     background-size: 100vw 150%;
     min-height: 200vh;
     height: fit-content;
