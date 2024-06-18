@@ -386,6 +386,7 @@ h1 {
     position: relative;
 
     .gallery {
+        margin: 9vh 0;
         min-height: 60%;
         height: fit-content;
         display: flex;
