@@ -745,3 +745,13 @@ h1 {
     height: 60vh;
 }
 
+
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: red;
+        main {
+            display: none;
+        }
+    }
+}
