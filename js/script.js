@@ -77,5 +77,6 @@ function send() {
     let messageField = document.getElementById("input-message");
     if (nameField.value !== "" && emailField.value !== "" && messageField.value !== "") {
         window.alert("name:\n" + nameField.value+"\nemail:\n" + emailField.value+"\nmessage: \n" + messageField.value);
+        document.getElementById("form").reset();
     }
 }
