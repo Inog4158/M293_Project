@@ -193,11 +193,11 @@
 
             <form id="form">
                 <div class="input-group">
-                    <input type="text" placeholder="Name" autocomplete="on" required>
-                    <input type="email" placeholder="E-Mail" autocomplete="on" required>
+                    <input id="input-name" type="text" placeholder="Name" autocomplete="on" required>
+                    <input id="input-email" type="email" placeholder="E-Mail" autocomplete="on" required>
                 </div>
-                <textarea name="message" placeholder="Nachricht" required></textarea>
-                <button class="button" onclick=""><span>Absenden</span></button>
+                <textarea id="input-message" name="message" placeholder="Nachricht" required></textarea>
+                <button class="button" onclick="send()"><span>Absenden</span></button>
             </form>
 
 

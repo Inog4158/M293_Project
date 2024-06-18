@@ -70,3 +70,12 @@ function getScrollOffsetter(multiplier, offset, unit) {
 function parallexEffect(elm, multiplier, offset){
     elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'vh')
 }
+
+function send() {
+    let nameField = document.getElementById("input-name");
+    let emailField = document.getElementById("input-email");
+    let messageField = document.getElementById("input-message");
+    if (nameField.value !== "" && emailField.value !== "" && messageField.value !== "") {
+        window.alert("name:\n" + nameField.value+"\nemail:\n" + emailField.value+"\nmessage: \n" + messageField.value);
+    }
+}
