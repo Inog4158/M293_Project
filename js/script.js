@@ -37,9 +37,11 @@ window.addEventListener('resize', function() {
 })
 
 window.addEventListener('scroll', function() {
-    parallexEffect(document.getElementById('about-section'), -2, 90)
-    parallexEffect(document.getElementById('skills-section'), -1, 0)
-    document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');
+    if (!window.matchMedia("screen and (max-aspect-ratio: 9/16)").matches) {
+        parallexEffect(document.getElementById('about-section'), -2, 90)
+        parallexEffect(document.getElementById('skills-section'), -1, 0)
+        document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');  
+    }
 });
 
 
