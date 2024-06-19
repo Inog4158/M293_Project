@@ -847,7 +847,7 @@ h1 {
     /* ---------------------------------------- */
 
     #home-section {
-        height: 120vh; /*TODO*/
+        height: 140vh;
 
         .quote {
             height: 60vh;
@@ -869,6 +869,30 @@ h1 {
         img {
             display: none;
         }
+    }
+
+    /* ---------------------------------------- */
+
+    #summary-section {
+        height: 70vh;
+        top: 65vh;
+
+        .logo {
+            padding-top: 5vh;
+            height: 10%;
+        }
+
+        .summary-text {
+            p {
+                font-size: var(--font-size-small);
+                width: 90%;
+            }
+        }
+    }
+
+    .popup {
+        width: 90%;
+        left: 5%;
     }
 
     /* ---------------------------------------- */
