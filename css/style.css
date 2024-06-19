@@ -896,4 +896,70 @@ h1 {
     }
 
     /* ---------------------------------------- */
+
+    #skills-section {
+        background-attachment: scroll;
+
+        h1 {
+            margin-top: 5vh;
+        }
+
+        ul {
+            margin-bottom: 10vh;
+
+            li {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 2vh 0;
+
+
+                p {
+                    font-size: var(--font-size-big);
+                    text-align: right;
+                }
+
+                .skill {
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .percentage {
+                    font-size: var(--font-size-small);
+                    text-align: right;
+                    flex: 1;
+                }
+
+                .progress-bar {
+                    height: var(--font-size-small);
+                    width: 100%;
+                    background-color: var(--color-highlight);
+                    translate: 0;
+                }
+
+                .P50 {
+                    width: 37.5%
+                }
+
+                .P65 {
+                    width: 48.75%
+                }
+
+                .P75 {
+                    width: 56.25%
+                }
+
+                .P90 {
+                    width: 67.5%
+                }
+
+                .P100 {
+                    width: 75%
+                }
+            }
+        }
+    }
+
+    /* ---------------------------------------- */
 }
