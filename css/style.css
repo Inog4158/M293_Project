@@ -53,26 +53,32 @@ body {
     align-items: center;
     height: 15vh;
     z-index: 1000;
-    .hamburger {
-        width: fit-content;
-        height: fit-content;
-        margin-right: 2vw;
-        .line {
-            background-color: var(--color-text);
-            width: 4vw;
-            height: 1vh;
-            margin: 1vh 0;
-            transition: 0.3s;
-        }
-    }
 
-    .hamburger:hover {
-        .line {
-            background-color: var(--color-highlight);
-        }
+    .hamburger {
+        margin-right: 2vw;
     }
 }
 
+
+
+.hamburger {
+    width: fit-content;
+    height: fit-content;
+
+    .line {
+        background-color: var(--color-text);
+        width: 7vh;
+        height: .8vh;
+        margin: 1.5vh 0;
+        transition: 0.3s;
+    }
+}
+
+.hamburger:hover {
+    .line {
+        background-color: var(--color-highlight);
+    }
+}
 
 /* ---------------------------------------- */
 
@@ -156,6 +162,10 @@ header {
             transition: 0.35s;
         }
 
+    }
+
+    .hamburger {
+        display: none;
     }
 
 }
