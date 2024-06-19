@@ -788,13 +788,10 @@ h1 {
 
 
 
-/* Change Flex Cards in Gallery */
+/* Tablet view */
 @media screen and (max-aspect-ratio: 5/3) {
     body {
         background-color: red;
-        main {
-
-        }
     }
     #portfolio-section {
         .gallery {
@@ -805,4 +802,74 @@ h1 {
             }
         }
     }
+}
+
+/* Smartphone view */
+@media  screen and (max-aspect-ratio: 9/16) {
+
+    :root {
+        /*Mobile font sizes*/
+        --font-size-normal: 5vmax;
+        --font-size-small: 3vmax;
+        --font-size-big: 6vmax;
+        --font-size-header: 9vmax;
+    }
+
+
+    body {
+        background-color: blue;
+    }
+
+    header {
+        justify-content: space-around;
+
+        .logo {
+            img {
+                height: 40%;
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        .hamburger {
+            display: inline-block;
+        }
+
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+        height: 10vh;
+    }
+
+    /* ---------------------------------------- */
+
+    #home-section {
+        height: 120vh; /*TODO*/
+
+        .quote {
+            height: 60vh;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                transform: translate(0, 0);
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    /* ---------------------------------------- */
 }
