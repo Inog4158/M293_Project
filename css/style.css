@@ -778,11 +778,21 @@ h1 {
 
 
 
-@media screen and (orientation: portrait) {
+/* Change Flex Cards in Gallery */
+@media screen and (max-aspect-ratio: 5/3) {
     body {
         background-color: red;
         main {
-            display: none;
+
+        }
+    }
+    #portfolio-section {
+        .gallery {
+            flex-direction: column;
+
+            .card {
+
+            }
         }
     }
 }
