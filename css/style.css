@@ -474,6 +474,7 @@ h1 {
             .video-container {
                 overflow: hidden;
                 display: grid;
+                height: 0;
                 grid-template-rows: 15vw;
                 grid-template-columns: 15vw;
 
@@ -541,6 +542,7 @@ h1 {
                 translate: 0 -15vh;
                 height: 15vw;
             }
+
             .play {
                 translate: 0;
             }
@@ -965,40 +967,24 @@ h1 {
     #portfolio-section {
 
         .gallery {
-            margin: 0 0 5vh 0;
+            margin: 0;
             flex-direction: column;
 
             .card {
-                margin-bottom: 50vh;
-                display: grid;
                 grid-template-columns: 60vw;
-                padding: 8%;
                 min-width: 60vw;
-
-                p {
-                    grid-row: 2 / 3;
-                    font-size: var(--font-size-small);
-                    display: none;
-                    z-index: 31;
-                    width: auto;
-                    text-align: center;
-                    align-self: center;
-                }
+                padding: 8%;
+                margin-bottom: 8vh;
 
                 img, .video-container{
-                    grid-row: 1 / 2;
                     width: 60vw;
-                    font-weight: normal;
-                    z-index: 30;
                 }
 
                 .video-container {
                     grid-template-rows: 60vw;
                     grid-template-columns: 60vw;
                     video {
-                        grid-row: 1 / 2;
                         height: 60vw;
-                        width: auto;
                     }
                 }
 
@@ -1006,67 +992,14 @@ h1 {
                     width: 12vw !important;
                     height: 12vw !important;
                 }
-
-
-                a {
-                    grid-row: 3 / 4;
-                    display: none;
-                    text-decoration: none;
-                    font-size: var(--font-size-normal);
-                    height: fit-content;
-                    justify-self: center;
-                    align-self: end;
-                    margin-top: 4vh;
-                }
             }
 
             .card:hover {
 
                 img, .video-container{
-                    translate: 0 -15vh;
+                    translate: 0 -8vh;
                     height: 60vw;
                 }
-                .play {
-                    translate: 0;
-                }
-
-                .big {
-                    visibility: hidden;
-                    opacity: 0;
-                }
-
-                .small {
-                    visibility: visible;
-                    opacity: 1;
-                }
-
-                .video-container:hover {
-                    scale: 105%;
-
-                    video {
-                        filter: none;
-                    }
-                    .play    {
-                        scale: 200%;
-                        position: relative;
-                    }
-                }
-
-
-
-                h2 {
-                    align-self: end;
-                    text-align: center;
-                }
-
-                a {
-                    display: inline;
-                }
-            }
-
-            .card * {
-                grid-column: 1 / 2;
-                transition: 0.6s;
             }
         }
     }
