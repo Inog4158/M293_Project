@@ -40,7 +40,7 @@ window.addEventListener('scroll', function() {
     if (!window.matchMedia("screen and (max-width: 767px)").matches) {
         parallexEffect(document.getElementById('about-section'), -2, 90)
         parallexEffect(document.getElementById('skills-section'), -1, 0)
-        document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'vh');  
+        document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'svh');  
     }
 });
 
@@ -70,7 +70,7 @@ function getScrollOffsetter(multiplier, offset, unit) {
 }
 
 function parallexEffect(elm, multiplier, offset){
-    elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'vh')
+    elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'svh')
 }
 
 function send() {
