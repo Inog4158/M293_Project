@@ -805,7 +805,7 @@ h1 {
 }
 
 /* Smartphone view */
-@media  screen and (max-aspect-ratio: 9/16) {
+@media  screen and (max-width: 767px) {
 
     :root {
         /*Mobile font sizes*/
