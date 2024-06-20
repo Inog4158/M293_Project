@@ -815,9 +815,8 @@ h1 {
         --font-size-header: 9vmax;
     }
 
-
-    body {
-        background-color: blue;
+    main {
+        overflow: hidden;
     }
 
     header {
