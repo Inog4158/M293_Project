@@ -1,5 +1,15 @@
+
+/*Eventlisteners*/
 document.addEventListener('DOMContentLoaded', function() {
-    const items = document.querySelectorAll('.item');
+    const hamburgers = document.querySelectorAll('.hamburger');
+    hamburgers.forEach(hamburger => {
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('open');
+            document.getElementById('sidebar').classList.toggle('open');
+        })
+    });
+
+    const items = document.querySelectorAll('.head-link');
     const home = document.getElementById('home-item');
     items.forEach(item => {
         item.addEventListener('mouseover', function() {
@@ -32,6 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 });
 
+window.addEventListener('scroll', function () {
+    const hamburger = document.getElementById('hamburger-overlay');
+    if (window.scrollY > document.getElementById('home').offsetHeight) {
+        hamburger.classList.add('visible');
+    } else {
+        document.querySelectorAll('.hamburger').forEach( hamburger => {
+            hamburger.classList.remove('open');
+        });
+        hamburger.classList.remove('visible');
+        document.getElementById('sidebar').classList.remove('open');
+    }
+});
+
 window.addEventListener('resize', function() {
     centerContact()
 })
@@ -47,7 +70,7 @@ window.addEventListener('scroll', function() {
 
 
 
-
+/*Functions*/
 function centerContact() {
     const contact = document.getElementById('contact-section');
     const puffer = document.getElementById('puffer-section');
@@ -73,6 +96,8 @@ function parallexEffect(elm, multiplier, offset){
     elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'svh')
 }
 
+
+/*Form*/
 function send() {
     let nameField = document.getElementById("input-name");
     let emailField = document.getElementById("input-email");

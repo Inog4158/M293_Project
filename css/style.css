@@ -49,16 +49,24 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    display: flex;
+    display: none;
     align-items: center;
     height: 15svh;
     z-index: 1000;
 
     .hamburger {
         margin-right: 2vw;
+        transition: 0.5s ease-in-out;
+
+        &.open {
+            margin-right: 20vw;
+        }
+    }
+
+    &.visible {
+        display: flex;
     }
 }
-
 
 
 .hamburger {
@@ -72,6 +80,18 @@ body {
         margin: 1.5svh 0;
         transition: 0.3s;
     }
+
+    &.open {
+        :nth-child(1) {
+            transform: translateY(2.3svh) rotate(-45deg);
+        }
+        :nth-child(2) {
+            opacity: 0;
+        }
+        :nth-child(3) {
+            transform: translateY(-2.3svh) rotate(45deg);
+        }
+    }
 }
 
 .hamburger:hover {
@@ -79,6 +99,61 @@ body {
         background-color: var(--color-highlight);
     }
 }
+
+.sidebar {
+    background-color: var(--color-primary);
+    border: 7px var(--color-highlight) solid;
+    border-right: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: calc((25vw + 7px) * -1);
+    width: 25vw;
+    height: calc(100svh - 12px);
+    transition: 0.5s ease-out;
+    
+    &.open {
+        right: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: center;
+
+        .item {
+            margin-bottom: 5svh;
+
+            .underline {
+                background-color: var(--color-highlight);
+                height: 1svh;
+                width: 0;
+                transition: 0.4s ease-out;
+            }
+
+            &:hover {
+                .underline {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    .item {
+        text-decoration: none;
+        &:hover {
+            span {
+                color: var(--color-highlight)
+            }
+        }
+    }
+}
+
 
 /* ---------------------------------------- */
 
@@ -102,14 +177,10 @@ header {
 
     nav {
         position: relative;
-        display: flex;
-        align-items: center;
         width: 80%;
-        height: 100%;
 
         .item {
             height: 100%;
-            text-decoration: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,12 +192,6 @@ header {
         }
 
         .item:nth-child(1) {
-            span {
-                color: var(--color-highlight);
-            }
-        }
-
-        .item:hover {
             span {
                 color: var(--color-highlight);
             }
@@ -207,6 +272,7 @@ footer {
         }
     }
 }
+
 /* ---------------------------------------- */
 
 #overlay {
@@ -264,14 +330,17 @@ h1 {
     width: fit-content;
     min-width: 45%;
     transition: 0.3s;
+
     span {
         margin: 0 2vw;
     }
 }
+
 .button:hover {
     background-color: var(--color-highlight);
     scale: 105%;
 }
+
 .button:active {
     scale: 95%;
 }
@@ -284,6 +353,7 @@ h1 {
     z-index: 20;
     border-radius: 40px;
 }
+
 /* ---------------------------------------- */
 
 #home-section {
@@ -459,7 +529,7 @@ h1 {
                 align-self: center;
             }
 
-            img, .video-container{
+            img, .video-container {
                 grid-row: 1 / 2;
                 width: 15vw;
                 height: 60svh;
@@ -485,6 +555,7 @@ h1 {
                     width: auto;
                     filter: brightness(50%);
                 }
+
                 .play {
                     grid-row: 1 / 2;
                     justify-self: center;
@@ -538,7 +609,7 @@ h1 {
                 display: inline;
             }
 
-            img, .video-container{
+            img, .video-container {
                 translate: 0 -15svh;
                 height: 15vw;
             }
@@ -563,12 +634,12 @@ h1 {
                 video {
                     filter: none;
                 }
-                .play    {
+
+                .play {
                     scale: 200%;
                     position: relative;
                 }
             }
-
 
 
             h2 {
@@ -729,13 +800,16 @@ h1 {
         .input-group {
             display: flex;
             width: 90%;
+
             input {
                 width: calc(50% - 0.5svh);
             }
+
             input:focus {
                 outline: none;
-                border:1px solid var(--color-highlight);
+                border: 1px solid var(--color-highlight);
             }
+
             input[type="text"] {
                 margin-right: 1svh;
             }
@@ -747,9 +821,10 @@ h1 {
             resize: none;
             margin: 1svh 0;
         }
+
         textarea:focus {
             outline: none;
-            border:1px solid var(--color-highlight);
+            border: 1px solid var(--color-highlight);
         }
     }
 
@@ -789,12 +864,12 @@ h1 {
 }
 
 
-
 /* Tablet view */
 @media screen and (max-aspect-ratio: 5/3) {
     body {
-        background-color: red;
+        background-color: var(--color-secondary);
     }
+
     #portfolio-section {
         .gallery {
 
@@ -807,7 +882,7 @@ h1 {
 }
 
 /* Smartphone view */
-@media  screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
     :root {
         /*Mobile font sizes*/
@@ -846,7 +921,6 @@ h1 {
     }
 
     /* ---------------------------------------- */
-
     #home-section {
         height: 140svh;
 
@@ -873,7 +947,6 @@ h1 {
     }
 
     /* ---------------------------------------- */
-
     #summary-section {
         height: 70svh;
         top: 65svh;
@@ -897,7 +970,6 @@ h1 {
     }
 
     /* ---------------------------------------- */
-
     #skills-section {
         background-attachment: scroll;
 
@@ -963,7 +1035,6 @@ h1 {
     }
 
     /* ---------------------------------------- */
-
     #portfolio-section {
 
         .gallery {
@@ -976,13 +1047,14 @@ h1 {
                 padding: 8%;
                 margin-bottom: 8svh;
 
-                img, .video-container{
+                img, .video-container {
                     width: 60vw;
                 }
 
                 .video-container {
                     grid-template-rows: 60vw;
                     grid-template-columns: 60vw;
+
                     video {
                         height: 60vw;
                     }
@@ -996,7 +1068,7 @@ h1 {
 
             .card:hover {
 
-                img, .video-container{
+                img, .video-container {
                     translate: 0 -8svh;
                     height: 60vw;
                 }

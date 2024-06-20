@@ -13,7 +13,7 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-<div class="hamburger-overlay">
+<div class="hamburger-overlay" id="hamburger-overlay">
     <div class="hamburger">
         <div class="line"></div>
         <div class="line"></div>
@@ -21,17 +21,43 @@
     </div>
 </div>
 
+<div class="sidebar" id="sidebar">
+    <nav class="menu">
+        <a href="#home" class="item">
+            <span>Home</span>
+            <div class="underline"></div>
+        </a>
+        <a href="#skills" class="item">
+            <span>Skills</span>
+            <div class="underline"></div>
+        </a>
+        <a href="#portfolio-section" class="item">
+            <span>Portfolio</span>
+            <div class="underline"></div>
+        </a>
+        <a href="#about-section" class="item">
+            <span>About Me</span>
+            <div class="underline"></div>
+        </a>
+        <a href="#contact" class="item">
+            <span>Contact</span>
+            <div class="underline"></div>
+        </a>
+
+    </nav>
+</div>
+
 <header id="home">
     <div class="logo">
         <img src="img/logo.png" alt="Logo">
     </div>
 
-    <nav>
-        <a href="#home" class="item"><span id="home-item">Home</span></a>
-        <a href="#skills" class="item"><span>Skills</span></a>
-        <a href="#portfolio-section" class="item"><span>Portfolio</span></a>
-        <a href="#about-section" class="item"><span>About Me</span></a>
-        <a href="#contact" class="item"><span>Contact</span></a>
+    <nav class="menu">
+        <a href="#home" class="item head-link"><span id="home-item">Home</span></a>
+        <a href="#skills" class="item head-link"><span>Skills</span></a>
+        <a href="#portfolio-section" class="item head-link"><span>Portfolio</span></a>
+        <a href="#about-section" class="item head-link"><span>About Me</span></a>
+        <a href="#contact" class="item head-link"><span>Contact</span></a>
         <div class="underline"></div>
     </nav>
 
