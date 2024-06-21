@@ -905,9 +905,9 @@ h1 {
     .sidebar {
         border: none;
         left: 0;
-        top: -100svh;
+        top: -100lvh;
         width: 100vw;
-        height: 100svh;
+        height: 100lvh;
 
         &.open {
             top: 0;
