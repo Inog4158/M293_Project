@@ -4,8 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburgers = document.querySelectorAll('.hamburger');
     hamburgers.forEach(hamburger => {
         hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('open');
+            document.getElementById('hamburger-overlay').classList.toggle('open');
             document.getElementById('sidebar').classList.toggle('open');
+
+            hamburgers.forEach(hamburger => {
+                hamburger.classList.toggle('open');
+            });
         })
     });
 
@@ -42,25 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 });
 
-window.addEventListener('scroll', function () {
-    const hamburger = document.getElementById('hamburger-overlay');
-    if (window.scrollY > document.getElementById('home').offsetHeight) {
-        hamburger.classList.add('visible');
-    } else {
-        document.querySelectorAll('.hamburger').forEach( hamburger => {
-            hamburger.classList.remove('open');
-        });
-        hamburger.classList.remove('visible');
-        document.getElementById('sidebar').classList.remove('open');
-    }
-});
+if(!isMobile()) {
+    window.addEventListener('scroll', function () {
+        const hamburger = document.getElementById('hamburger-overlay');
+        if (window.scrollY > document.getElementById('home').offsetHeight) {
+            hamburger.classList.add('visible');
+        } else {
+            document.querySelectorAll('.hamburger').forEach( hamburger => {
+                hamburger.classList.remove('open');
+            });
+            hamburger.classList.remove('visible');
+            document.getElementById('sidebar').classList.remove('open');
+        }
+    });
+}
 
 window.addEventListener('resize', function() {
     centerContact()
 })
 
 window.addEventListener('scroll', function() {
-    if (!window.matchMedia("screen and (max-width: 767px)").matches) {
+    if (!isMobile()) {
         parallexEffect(document.getElementById('about-section'), -2, 90)
         parallexEffect(document.getElementById('skills-section'), -1, 0)
         document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'svh');  
@@ -106,4 +112,8 @@ function send() {
         window.alert("name:\n" + nameField.value+"\nemail:\n" + emailField.value+"\nmessage: \n" + messageField.value);
         document.getElementById("form").reset();
     }
+}
+
+function isMobile() {
+    return window.matchMedia("screen and (max-width: 767px)").matches;
 }
