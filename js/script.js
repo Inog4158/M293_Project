@@ -1,6 +1,5 @@
-
 /*Eventlisteners*/
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hamburgers = document.querySelectorAll('.hamburger');
     hamburgers.forEach(hamburger => {
         hamburger.addEventListener('click', function () {
@@ -16,43 +15,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('.head-link');
     const home = document.getElementById('home-item');
     items.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            if (item !== home.parentElement){
+        item.addEventListener('mouseover', function () {
+            if (item !== home.parentElement) {
                 home.style.color = 'var(--color-text)';
             }
         });
-        item.addEventListener('mouseout', function() {
+        item.addEventListener('mouseout', function () {
             home.style.color = 'var(--color-highlight)';
         });
     });
-    
-    centerContact();
 
-    
-    
+    if (!isMobile()) {
+        centerContact();
+    }
+
     const video = document.getElementById("video-container");
     const overlay = document.getElementById("overlay");
     const overlayVideo = document.getElementById("overlay-video");
-    
-    overlay.addEventListener("click", function() {
+
+    overlay.addEventListener("click", function () {
         overlay.style.display = "none";
         overlayVideo.pause();
         overlayVideo.currentTime = 0;
     });
-    
+
     video.addEventListener("click", function () {
         overlay.style.display = "flex";
         overlayVideo.play();
     })
 });
 
-if(!isMobile()) {
+if (!isMobile()) {
     window.addEventListener('scroll', function () {
         const hamburger = document.getElementById('hamburger-overlay');
         if (window.scrollY > document.getElementById('home').offsetHeight) {
             hamburger.classList.add('visible');
         } else {
-            document.querySelectorAll('.hamburger').forEach( hamburger => {
+            document.querySelectorAll('.hamburger').forEach(hamburger => {
                 hamburger.classList.remove('open');
             });
             hamburger.classList.remove('visible');
