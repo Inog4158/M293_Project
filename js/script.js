@@ -59,61 +59,58 @@ if(!isMobile()) {
             document.getElementById('sidebar').classList.remove('open');
         }
     });
-}
 
-window.addEventListener('resize', function() {
-    centerContact()
-})
+    window.addEventListener('resize', function () {
+        centerContact()
+    })
 
-window.addEventListener('scroll', function() {
-    if (!isMobile()) {
+    window.addEventListener('scroll', function () {
+
         parallexEffect(document.getElementById('about-section'), -2, 90)
         parallexEffect(document.getElementById('skills-section'), -1, 0)
-        document.getElementById('profile').style.top =  getScrollOffsetter(1.5, -5, 'svh');  
+        document.getElementById('profile').style.top = getScrollOffsetter(1.5, -5, 'svh');
+    });
+}
+
+
+    /*Functions*/
+    function centerContact() {
+        const contact = document.getElementById('contact-section');
+        const puffer = document.getElementById('puffer-section');
+        var contactHeight = parseFloat((getStyleValue(contact, 'padding-bottom').slice(0, -2))) + parseFloat(getStyleValue(contact, 'height').slice(0, -2))
+        contact.style.bottom = (getStyleValue(puffer, 'height').slice(0, -2)) - contactHeight / 2 + 'px';
     }
-});
 
-
-
-
-/*Functions*/
-function centerContact() {
-    const contact = document.getElementById('contact-section');
-    const puffer = document.getElementById('puffer-section');
-    var contactHeight = parseFloat((getStyleValue(contact, 'padding-bottom').slice(0, -2))) + parseFloat(getStyleValue(contact, 'height').slice(0, -2))
-    contact.style.bottom = (getStyleValue(puffer, 'height').slice(0, -2)) - contactHeight/2 + 'px';
-}
-
-function getStyleValue(elm, property) {
-    return window.getComputedStyle(elm).getPropertyValue(property);
-}
-
-function getVerticalScrollPercentage(){
-    const elm = document.body;
-    const p = elm.parentNode
-    return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
-}
-
-function getScrollOffsetter(multiplier, offset, unit) {
-    return getVerticalScrollPercentage() * multiplier + offset + unit;
-}
-
-function parallexEffect(elm, multiplier, offset){
-    elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'svh')
-}
-
-
-/*Form*/
-function send() {
-    let nameField = document.getElementById("input-name");
-    let emailField = document.getElementById("input-email");
-    let messageField = document.getElementById("input-message");
-    if (nameField.value !== "" && emailField.value !== "" && messageField.value !== "") {
-        window.alert("name:\n" + nameField.value+"\nemail:\n" + emailField.value+"\nmessage: \n" + messageField.value);
-        document.getElementById("form").reset();
+    function getStyleValue(elm, property) {
+        return window.getComputedStyle(elm).getPropertyValue(property);
     }
-}
 
-function isMobile() {
-    return window.matchMedia("screen and (max-width: 767px)").matches;
-}
+    function getVerticalScrollPercentage() {
+        const elm = document.body;
+        const p = elm.parentNode
+        return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight) * 100
+    }
+
+    function getScrollOffsetter(multiplier, offset, unit) {
+        return getVerticalScrollPercentage() * multiplier + offset + unit;
+    }
+
+    function parallexEffect(elm, multiplier, offset) {
+        elm.style.backgroundPositionY = getScrollOffsetter(multiplier, offset, 'svh')
+    }
+
+
+    /*Form*/
+    function send() {
+        let nameField = document.getElementById("input-name");
+        let emailField = document.getElementById("input-email");
+        let messageField = document.getElementById("input-message");
+        if (nameField.value !== "" && emailField.value !== "" && messageField.value !== "") {
+            window.alert("name:\n" + nameField.value + "\nemail:\n" + emailField.value + "\nmessage: \n" + messageField.value);
+            document.getElementById("form").reset();
+        }
+    }
+
+    function isMobile() {
+        return window.matchMedia("screen and (max-width: 767px)").matches;
+    }
