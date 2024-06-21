@@ -907,7 +907,7 @@ h1 {
         left: 0;
         top: -100svh;
         width: 100vw;
-        height: 100svh;
+        height: 100lvh;
 
         &.open {
             top: 0;
