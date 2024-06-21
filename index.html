@@ -209,38 +209,57 @@
 
         </div>
     </section>
+    <section id="puffer-section">
+        <section id="contact-section" class="popup">
+            <h1 id="contact">Contact</h1>
+            <div class="contact-content">
 
-    <section id="contact-section" class="popup">
-        <h1 id="contact">Contact</h1>
-        <div class="contact-content">
+                <div class="contact-text">
+                    <p>
+                        Hast du Fragen zu meinen Projekten oder möchtest mehr über meine Fähigkeiten erfahren?
+                    </p>
+                    <p class="middle-text">
+                        Zögere nicht, mich zu kontaktieren. Ich freue mich auf deine Nachricht und werde so schnell wie
+                        möglich
+                        antworten.
+                    </p>
+                    <p class="mail-phone">
+                        <a href="mailto:meine@email.com">meine@email.com</a>
+                        <a href="tel:+123456789">Tel. +12 345 67 89</a>
+                    </p>
+                </div>
 
-            <div class="contact-text">
-                <p>
-                    Hast du Fragen zu meinen Projekten oder möchtest mehr über meine Fähigkeiten erfahren?
-                </p>
-                <p class="middle-text">
-                    Zögere nicht, mich zu kontaktieren. Ich freue mich auf deine Nachricht und werde so schnell wie
-                    möglich
-                    antworten.
-                </p>
-                <p>
+                <form id="form">
+                    <div class="input-group">
+                        <input id="input-name" type="text" placeholder="Name" autocomplete="on" required>
+                        <input id="input-email" type="email" placeholder="E-Mail" autocomplete="on" required>
+                    </div>
+                    <textarea id="input-message" name="message" placeholder="Nachricht" required></textarea>
+                    <button class="button" onclick="send()"><span>Absenden</span></button>
+                </form>
+
+                <p class="mail-phone">
                     <a href="mailto:meine@email.com">meine@email.com</a>
                     <a href="tel:+123456789">Tel. +12 345 67 89</a>
                 </p>
+
             </div>
 
-
-            <form id="form">
-                <div class="input-group">
-                    <input id="input-name" type="text" placeholder="Name" autocomplete="on" required>
-                    <input id="input-email" type="email" placeholder="E-Mail" autocomplete="on" required>
-                </div>
-                <textarea id="input-message" name="message" placeholder="Nachricht" required></textarea>
-                <button class="button" onclick="send()"><span>Absenden</span></button>
-            </form>
-
-
-        </div>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="img/icons/linkedin.png" alt="linkedin-icon">
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="img/icons/twitter.png" alt="twitter-icon">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="img/icons/instagram.png" alt="instagram-icon">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/icons/facebook.png" alt="facebook-icon">
+                </a>
+            </div>
+        </section>
 
         <div class="social-media">
             <a href="https://www.linkedin.com/" target="_blank">
@@ -256,9 +275,8 @@
                 <img src="img/icons/facebook.png" alt="facebook-icon">
             </a>
         </div>
-    </section>
 
-    <section id="puffer-section"></section>
+    </section>
 </main>
 
 
