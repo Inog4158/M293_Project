@@ -1228,3 +1228,16 @@ h1 {
 
     /* ---------------------------------------- */
 }
+
+@media screen and (max-aspect-ratio: 15 / 11) and (min-width: 767px) {
+    header {
+        justify-content: space-between;
+
+        nav {
+            display: none !important;
+        }
+    }
+    .hamburger-overlay {
+        display: flex;
+    }
+}

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 if (!isMobile()) {
     window.addEventListener('scroll', function () {
         const hamburger = document.getElementById('hamburger-overlay');
-        if (window.scrollY > document.getElementById('home').offsetHeight) {
+        if (window.scrollY > document.getElementById('home').offsetHeight || window.matchMedia("screen and (max-aspect-ratio: 15 / 11) and (min-width: 767px)").matches) {
             hamburger.classList.add('visible');
         } else {
             document.querySelectorAll('.hamburger').forEach(hamburger => {
