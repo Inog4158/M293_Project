@@ -65,6 +65,10 @@ window.addEventListener('resize', function () {
     if (!isMobile()) {
         centerContact()
     }
+    else {
+        document.getElementById('about-section').style.backgroundPositionY = '0';
+        document.getElementById('skills-section').style.backgroundPositionY = '0';
+    }
 })
 
 window.addEventListener('scroll', function () {
@@ -77,10 +81,6 @@ window.addEventListener('scroll', function () {
         }
 
         document.getElementById('profile').style.top = getScrollOffsetter(1.5, -5, 'svh');
-    }
-    else {
-        document.getElementById('about-section').style.backgroundPositionY = '0';
-        document.getElementById('skills-section').style.backgroundPositionY = '0';
     }
 });
 
