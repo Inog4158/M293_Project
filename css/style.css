@@ -1230,6 +1230,8 @@ h1 {
     /* ---------------------------------------- */
 }
 
+
+/*Between Mobile and Desktop*/
 @media screen and (max-aspect-ratio: 15 / 11) and (min-width: 767px) {
     header {
         justify-content: space-between;
@@ -1241,4 +1243,22 @@ h1 {
     .hamburger-overlay {
         display: flex;
     }
+
+    /* ---------------------------------------- */
+
+    #home-section {
+        height: 150svh;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .quote {
+            height: 40svh;
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    /* ---------------------------------------- */
 }

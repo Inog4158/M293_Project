@@ -65,8 +65,14 @@ if (!isMobile()) {
 
     window.addEventListener('scroll', function () {
 
-        parallexEffect(document.getElementById('about-section'), -2, 90)
-        parallexEffect(document.getElementById('skills-section'), -1, 0)
+        parallexEffect(document.getElementById('about-section'), -2, 90);
+        if(isTablet()) {
+            parallexEffect(document.getElementById('skills-section'), -0.8, 21);
+        }
+        else {
+            parallexEffect(document.getElementById('skills-section'), -1, 0);
+        }
+        
         document.getElementById('profile').style.top = getScrollOffsetter(1.5, -5, 'svh');
     });
 }
