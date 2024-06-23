@@ -1386,4 +1386,19 @@ h1 {
         height: 80svh;
     }
 }
+
+/*For special cases*/
+/*Between Mobile and Desktop*/
+@media screen and (max-aspect-ratio: 5 / 7) and (min-width: 767px) {
+    #home-section {
+        height: 85svh;
+
+        img {
+            display: none;
+        }
+    }
+
+    #summary-section {
+        top: 40svh;
+    }
 }
