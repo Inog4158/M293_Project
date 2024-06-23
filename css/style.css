@@ -1347,4 +1347,19 @@ h1 {
     }
 
      ---------------------------------------- */
+
+    #about-section {
+        background-size: auto 150%;
+
+        .timeline {
+            margin-bottom: 70svh;
+
+            .text {
+                font-size: var(--font-size-small);
+            }
+
+        }
+    }
+
+    /* ---------------------------------------- */
 }
