@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 if (!isMobile()) {
     window.addEventListener('scroll', function () {
         const hamburger = document.getElementById('hamburger-overlay');
-        if (window.scrollY > document.getElementById('home').offsetHeight || window.matchMedia("screen and (max-aspect-ratio: 15 / 11) and (min-width: 767px)").matches) {
+        if (window.scrollY > document.getElementById('home').offsetHeight || isTablet()) {
             hamburger.classList.add('visible');
         } else {
             document.querySelectorAll('.hamburger').forEach(hamburger => {
@@ -112,4 +112,8 @@ if (!isMobile()) {
 
     function isMobile() {
         return window.matchMedia("screen and (max-width: 767px)").matches;
+    }
+    
+    function isTablet() {
+        return window.matchMedia("screen and (max-aspect-ratio: 15 / 11) and (min-width: 767px)").matches;
     }
