@@ -1261,4 +1261,47 @@ h1 {
     }
 
     /* ---------------------------------------- */
+
+    #summary-section {
+        display: flex;
+        flex-direction: column;
+        height: 90svh;
+        top: 105svh;
+
+        .logo {
+            padding-top: 10svh;
+            height: 15%;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .summary-text {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    }
+
+    /* ---------------------------------------- */
+
+    #skills-section {
+        ul {
+            margin-bottom: 10svh;
+            li {
+                grid-template-columns: 2fr 40% 1fr;
+            }
+        }
+    }
+
+    /* ----------------------------------------
 }
